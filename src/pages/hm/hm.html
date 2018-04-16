@@ -1,0 +1,112 @@
+<!--<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-10>
+    <img ion-right src="assets/imgs/bananalgo.jpg" class="navbarLogo width=20px" />
+  </ion-col>
+ 
+  <ion-col col-2>
+    <button ion-button color="primary" (click)="logout()">Logout</button>
+  </ion-col>
+  </ion-row>
+  
+  <ion-title>View Tasks</ion-title>
+  </ion-navbar>
+</ion-header>-->
+<!--<ion-header>
+  <ion-navbar>
+
+      <ion-row>
+          
+      <ion-col col-1>
+        <button ion-button color="primary" (click)="logout()">Logout</button>
+      </ion-col>
+      </ion-row>
+
+
+    </ion-navbar>
+  </ion-header>-->
+
+
+  <ion-header>
+<ion-navbar color="primary">
+  <ion-grid>
+    <ion-row>    
+      <ion-col col-2>
+        <ion-icon name="menu" style="color:white;" start></ion-icon>
+    </ion-col>
+
+    <ion-col col-8>
+        <ion-title>StudentTaskManager</ion-title>
+    </ion-col>
+
+     <!--<ion-col col-2>
+       <ion-icon ios="ios-notifications-outline" md="md-notifications-outline" style="color:white;" end></ion-icon>
+    </ion-col>-->
+  </ion-row>
+
+  </ion-grid>
+</ion-navbar>
+</ion-header>
+  
+  <ion-content padding  style="background-image:url(../assets/imgs/tree.png);">
+      
+  
+  
+      <!--<table class="table table-bordered">
+          <thead class="thead">
+          <th>TASK</th>
+          <th>ISSUEDATE</th>
+          <th>DEADLINE</th>
+          <th>DESCRIPTION</th>
+          
+          </thead>
+  <tbody >
+  <tr *ngFor="let task of tasksi; index as i">
+  <td>{{task[0]}}</td>
+  <td>{{task[1]}}</td>
+  <td>{{task[2]}}</td>
+  <td>{{task[3]}}</td>
+  
+  </tr>
+  
+  
+  </tbody>
+  
+          
+          </table>-->
+  
+          <ion-list *ngFor="let task of tasksi; index as i">
+  
+  
+  
+            <ion-item-sliding>
+              <ion-item >
+                <ion-avatar item-start>
+                  <img src="../assets/imgs/tasko.jpg">
+                </ion-avatar>
+                <h2 style="color:blue">{{task[0]}}</h2>
+                <p>Deadline: {{task[2]}}</p>
+                
+           <p style="color:crimson" *ngIf="task[4].includes('OVERDUE')">Timeleft: {{task[4]}} </p>
+                <p style="color:rgb(20, 207, 220)" *ngIf="task[4].includes('Dayz')">Timeleft: {{task[4]}} </p>
+                <p style="color:rgb(20, 207, 220)" *ngIf="task[4].includes('MONTHS')">Timeleft: {{task[4]}} </p>
+            
+                <i><p style="color:green">{{task[3].slice(0,10)}}... </p></i>
+
+
+              </ion-item>
+              <ion-item-options side="right">
+                <button ion-button color="primary">
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  Done
+                </button>
+                <button ion-button color="secondary" (click)="deleteData(task[0],i)">
+                  <ion-icon name="trash"></ion-icon>
+                  Delete
+                </button>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-list>
+  </ion-content>
+  

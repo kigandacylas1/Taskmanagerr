@@ -1,17 +1,86 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<!--<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-5>
+    
+  </ion-col>
+  <ion-col col-5>
+    <button ion-button color="primary" (click)="loadData()">View Tasks</button>
+  </ion-col>
+  <ion-col col-1>
+    <button ion-button color="primary" (click)="logout()">Logout</button>
+  </ion-col>
+  </ion-row>-->
+  <ion-header>
+      <ion-navbar color="primary">
+        <ion-grid>
+          <ion-row>    
+            <ion-col col-2>
+              <ion-icon name="menu" style="color:white;" start></ion-icon>
+          </ion-col>
+      
+          <ion-col col-8>
+              <ion-title>StudentTaskManager</ion-title>
+          </ion-col>
+      
+         <!-- <ion-col col-2>
+              <ion-icon ios="ios-notifications-outline" md="md-notifications-outline" style="color:white;" end></ion-icon>
+          </ion-col>-->
+        </ion-row>
+      
+        </ion-grid>
+      </ion-navbar>
+      </ion-header>
+ 
+
+  
+
+ 
+
+
+
+<ion-content padding >
+    
+  
+  
+
+
+  <ion-list >
+      <ion-item style="background:transparent">
+        <ion-label floating >Task Name</ion-label>
+    <ion-input  type="text" [(ngModel)]="taskname" ></ion-input>
+    
+      </ion-item >
+      <ion-item style="background:transparent">
+        <ion-label floating>Issue Date</ion-label>
+        <ion-datetime style="color: aliceblue" displayFormat="MM/DD/YYYY" [(ngModel)]="issuedate"></ion-datetime>
+          
+          
+      </ion-item>
+      
+      <ion-list>
+          <ion-item style="background:transparent">
+            <ion-label floating>Deadline</ion-label>
+        <ion-datetime style="color: aliceblue" displayFormat="MM/DD/YYYY" [(ngModel)]="deadline"></ion-datetime>
+        
+          </ion-item>
+          <ion-item style="background:transparent">
+            <ion-label floating>Description</ion-label>
+              <ion-input type="text" [(ngModel)]="description" ></ion-input>
+              
+                </ion-item>
+          
+          
+          
+          
+        <button ion-button block color="primary" (click)="submit()">Submit</button>
+        
+        </ion-list>
+      
+      
+   
+    </ion-list>
+
 </ion-content>
+

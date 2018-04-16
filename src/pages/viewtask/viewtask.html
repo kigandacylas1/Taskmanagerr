@@ -1,0 +1,124 @@
+<!--<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-10>
+    <img ion-right src="assets/imgs/bananalgo.jpg" class="navbarLogo width=20px" />
+  </ion-col>
+ 
+  <ion-col col-2>
+    <button ion-button color="primary" (click)="logout()">Logout</button>
+  </ion-col>
+  </ion-row>
+  
+  <ion-title>View Tasks</ion-title>
+  </ion-navbar>
+</ion-header>-->
+<!--<ion-header>
+<ion-navbar>
+  <button ion-button color="primary" menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+    <ion-row>
+        <ion-col col-11>
+      
+    </ion-col>
+    <ion-col col-1>
+      <button ion-button color="primary" (click)="logout()">Logout</button>
+    </ion-col>
+    </ion-row>
+
+  </ion-navbar>
+</ion-header>-->
+
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-grid>
+        <ion-row>    
+          <ion-col col-2>
+            <ion-icon name="menu" style="color:white;" start></ion-icon>
+        </ion-col>
+    
+        <ion-col col-8>
+            <ion-title>StudentTaskManager</ion-title>
+        </ion-col>
+    
+        <ion-col col-2>
+            <ion-icon ios="ios-log-out" md="md-log-out" style="color:white;font-size:20px" (click)=logout() end ></ion-icon>
+        </ion-col>
+      </ion-row>
+    
+      </ion-grid>
+    </ion-navbar>
+    </ion-header>
+
+<ion-content padding  style="background-image:url(../assets/imgs/tree.png);">
+    
+
+
+    
+
+
+<ion-grid>
+ 
+  <ion-row>
+      <ion-col col-12 style="text-align:center;">
+          <ion-icon ios="ios-paper" md="md-paper" style="color:white; font-size:75px;padding-bottom:20px; padding-top:20px;"></ion-icon>
+      </ion-col>
+      
+  </ion-row>
+  
+
+  <ion-row>
+    <ion-col col-6>
+      <button style="background-color:transparent !important; border:none;" (click)=viewtask()>
+      <ion-card style="width:100% !important; text-align:center; border: 1px solid green; ">
+        <ion-card-content style="text-align:center;">
+          <ion-icon ios="ios-list-box" md="md-list-box" style="font-size:40px; color:green;"></ion-icon>
+          <hr>
+          <h2 style="color:green;">View Task</h2>
+        </ion-card-content>
+      </ion-card>
+      </button>
+    </ion-col>
+
+    <ion-col col-6>
+        <button style="background-color:transparent !important;border:none;" (click)=addtask()>
+        <ion-card style="width:100% !important; text-align:center; border: 1px solid green; ">
+          <ion-card-content style="text-align:center;">
+            <ion-icon ios="ios-add-circle" md="md-add-circle" style="font-size:40px; color:green;"></ion-icon>
+            <hr>
+            <h2 style="color:green;">Add Tasks</h2>
+          </ion-card-content>
+        </ion-card>
+        </button>
+      </ion-col>
+  </ion-row>
+
+  <ion-row style="display:flex">
+      <ion-col col-6>
+          <button style="background-color:transparent !important;border:none;" (click)=viewtask()>
+          <ion-card style="width:100% !important; text-align:center; border: 1px solid green; ">
+            <ion-card-content style="text-align:center;">
+              <ion-icon ios="ios-alarm" md="md-alarm" style="font-size:40px; color:green;"></ion-icon>
+              <hr>
+              <h2 style="color:green; ">Deadline</h2>
+            </ion-card-content>
+          </ion-card>
+          </button>
+        </ion-col>
+  
+        <ion-col col-6>
+            <button style="background-color:transparent !important;border:none !important;border:0% !important;"(click)=about()>
+            <ion-card style="width:100% !important; text-align:center; border: 1px solid green; ">
+              <ion-card-content style="text-align:center;">
+                <ion-icon ios="ios-information-circle" md="md-information-circle" style="font-size:40px; color:green;"></ion-icon>
+                <hr>
+                <h2 style="color:green;">About</h2>
+              </ion-card-content>
+            </ion-card>
+            </button>
+          </ion-col>
+    </ion-row>
+</ion-grid>
+
+</ion-content>

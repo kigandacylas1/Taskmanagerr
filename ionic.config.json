@@ -1,6 +1,6 @@
 {
   "name": "tkmg",
-  "app_id": "",
+  "app_id": "61f9afc9",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

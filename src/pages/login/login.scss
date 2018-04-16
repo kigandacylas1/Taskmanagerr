@@ -1,0 +1,43 @@
+page-login {
+    #login{
+        background: color($colors, energy);
+        h1{
+            font-size: 52px;
+            margin-top:50px
+        }
+        .marginTop{
+            margin-top:150px;
+        }
+        .logo{
+            height: 100px;
+        }
+    }
+
+}
+.nCard{
+    margin: 0px !important;
+    width: 100% !important;
+    margin-top: 53px !important;
+ 
+}
+img{
+    height: 70vh;
+    width: auto;
+    margin: auto;
+    display: block;
+  }
+
+
+  .ing{
+    height: 70%;
+    width: 50%;
+    border-radius: 100%;
+  }
+
+  .background{
+    background-image: url("assets/imgs/blue2.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    z-index: 2;
+    }

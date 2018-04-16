@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams,App } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,App } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
 /**
@@ -9,12 +9,12 @@ import { Storage } from '@ionic/storage';
  * Ionic pages and navigation.
  */
 
-
+@IonicPage()
 @Component({
-  selector: 'page-contact',
-  templateUrl: 'contact.html',
+  selector: 'page-viewtask',
+  templateUrl: 'hm.html',
 })
-export class ContactPage {
+export class hmPage {
   taskname: string;
   issuedate: Date;
   deadline;
@@ -30,7 +30,6 @@ export class ContactPage {
   day:number=this.currentdate.getDate();
   dmon:number;
   dday:number;
-  dyr:number;
   //dmon:number;
   //dmon:number=this.deadline.getMonth() ;
   //dday:number=this.deadline.getDay() ;
@@ -58,31 +57,29 @@ this.loadData();
     //this.storage.remove(key);
     this.taskname=value[0];
     this.issuedate =value[1];
-   this.deadline =value[2];
+   this.deadline =(value[2]);
     this.description=value[3];
    this.dmon=(value[2]).slice(5,7);
     this.dmon =Number(this.dmon);
 
     this.dday=(value[2]).slice(8,10);
     this.dday =Number(this.dday);
-
-    this.dday=(value[2]).slice(8,10);
     //this.timeleft=this.dmon;
-    if( this.month==this.dmon&&this.day==this.dday){
+    if( this.month!=this.dmon){
     
-      this.timeleft="TODAY";
+      this.timeleft=(this.dmon-this.month).toString() + "   MONTHS";
       
      //this.timeleft=(this.dday-this.day).toString() + "Days";
   
     }
-    /*else if ((this.dday-this.day)>=0){
+    else if ((this.dday-this.day)>=0){
      
       this.timeleft=(this.dday-this.day).toString() + "   Dayz";
     }
     else{
       this.timeleft=(this.dday-this.day).toString() + "   Days OVERDUE";
       this.timeleft= this.timeleft.slice(1)
-    }*/
+    }
 
           
 this.tasksi.push([this.taskname,this.issuedate,this.deadline,this.description,this.timeleft]);
